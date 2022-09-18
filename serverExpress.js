@@ -1,4 +1,4 @@
-const Contenedor = require("./Contenedor");
+const Contenedor = require("./contenedor.js");
 const express = require('express');
 const app = express();
 
@@ -6,7 +6,7 @@ const PORT = 8080;
 const contenedor = new Contenedor("productos.json");
 
 app.get('/', (req, res) => {
-    res.send('Alo Express Server!')
+    res.send('Alo Express Server! ingresa "productos", "libros" o "productoRandom" para ver mas')
 });
 
 app.get('/productos', async (req, res) => {
